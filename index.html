@@ -4,9 +4,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
   <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
-<body ng-app="confirmacaoApp" ng-cloak>
-  <h1>Hello world</h1>
+<body layout="row" ng-app="confirmacaoApp" ng-cloak>
+  <div flex="30" layout="column" class="boxWithHeight" layout-padding>
+    flex="30"
+    <section flex="40">flex="40"</section>
+    <section flex>flex</section>
+  </div>
+  <div flex layout="column" class="boxWithHeight" layout-padding>
+    flex
+    <section flex="70">flex="70"</section>
+    <section flex="20">flex="20"</section>
+    <section flex >flex </section>
+  </div>
   
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-animate/angular-animate.min.js"></script>
