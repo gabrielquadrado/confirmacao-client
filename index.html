@@ -1,32 +1,37 @@
-<html lang="en" >
+<html lang="en" ng-app="confirmacaoApp">
 <head>
-  <base href="../">
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
   <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
-<body layout="row" ng-app="confirmacaoApp" ng-cloak>
-  <div flex="30" layout="column" class="boxWithHeight" layout-padding>
-    flex="30"
-    <section flex="40">flex="40"</section>
-    <section flex>flex</section>
-  </div>
-  <div flex layout="column" class="boxWithHeight" layout-padding>
-    flex
-    <section flex="70">flex="70"</section>
-    <section flex="20">flex="20"</section>
-    <section flex >flex </section>
-  </div>
+<body ng-cloak>
+  
+  <div ng-view></div>
   
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-animate/angular-animate.min.js"></script>
   <script src="bower_components/angular-aria/angular-aria.min.js"></script>
   <script src="bower_components/angular-messages/angular-messages.min.js"></script>
-
   <script src="bower_components/angular-material/angular-material.min.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
   
   <script type="text/javascript" src="src/app.js"></script>
-  
+  <script type="text/javascript" src="src/controllers/loginCtrl.js"></script>
+
+  <script>
+    var config = {
+      apiKey: "AIzaSyBndzF5iaWrC_4szG6ZHyEqd_BJt_P_siw",
+      authDomain: "confirmacao-webservice.firebaseapp.com",
+      databaseURL: "https://confirmacao-webservice.firebaseio.com",
+      projectId: "confirmacao-webservice",
+      storageBucket: "confirmacao-webservice.appspot.com",
+      messagingSenderId: "551222939356"
+    };
+    firebase.initializeApp(config);
+  </script>
+
 </body>
 </html>
